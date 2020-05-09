@@ -10,6 +10,8 @@
     <title>CraftII Final Project</title>
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+    <!-- Above code is the style for the Leaflet map -->
     <!-- Your styles should be called here -->
     <link href="style.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -19,6 +21,10 @@
       	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       	<![endif]-->
     <script src="https://unpkg.com/@newswire/scroller/dist/index.umd.js"> </script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <!-- Both scripts above load scroller and Leaflet js libraries -->
   </head> ​
 
   <body>
@@ -38,16 +44,74 @@
     </div>
     <div class="container">
       <p><strong>By Joseph Jungermann (<a href="https://twitter.com/j_mann29">@j_mann29</a>)</strong></p>
+      <br>
+      <div class="counter-section">
+        <p class="counter">109,739</p>
+        <p>Example text</p>
+      </div>
       <p>Lorum epsum ipsom, etc. etc. etc.</p>
+      <br>
+      <div id="covidMap">
+      </div>
+      <br>
+      <p><iframe title="Total Employees Affected by WARN Notices Due to COVID-19" aria-label="Interactive area chart" id="datawrapper-chart-XcVyj" src="https://datawrapper.dwcdn.net/XcVyj/2/" scrolling="no" frameborder="0"
+          style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe>
+        <script type="text/javascript">
+          ! function() {
+            "use strict";
+            window.addEventListener("message", (function(a) {
+              if (void 0 !== a.data["datawrapper-height"])
+                for (var e in a.data["datawrapper-height"]) {
+                  var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']");
+                  t && (t.style.height = a.data["datawrapper-height"][e] + "px")
+                }
+            }))
+          }();
+        </script>
+      </p>
+      <br>
+      <p><iframe title="Total Employees Laid Off by Industry Due to COVID-19" aria-label="chart" id="datawrapper-chart-MdHPS" src="https://datawrapper.dwcdn.net/MdHPS/2/" scrolling="no" frameborder="0"
+          style="width: 0; min-width: 100% !important; border: none;" height="441"></iframe>
+        <script type="text/javascript">
+          ! function() {
+            "use strict";
+            window.addEventListener("message", (function(a) {
+              if (void 0 !== a.data["datawrapper-height"])
+                for (var e in a.data["datawrapper-height"]) {
+                  var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']");
+                  t && (t.style.height = a.data["datawrapper-height"][e] + "px")
+                }
+            }))
+          }();
+        </script>
+      </p>
+      <br>
       <div class="container picture">
         <img src="images/tim-mossholder-C8jNJslQM3A-unsplash.jpg">
       </div>
+
     </div>
     <!-- the jQuery library. You need this to be able to use jQuery ($) -->
-    <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+    <!-- Script for jquery version to run counter -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 
     <!-- Your javascript should be called here -->
-    <script src="main.js"></script>
+    <script src="scroller.js"></script>
+    <script src="map.js"></script>
+
+    <!-- Counter script below -->
+    <script src="counter.js"></script>
+    <script>
+      jQuery(document).ready(function($) {
+        $('.counter').counterUp({
+          delay: 10,
+          time: 2000
+        });
+      });
+    </script>
+
   </body>
 
 </html>
