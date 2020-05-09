@@ -15,6 +15,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 function myEvent(feature, layer) {
 	layer.bindPopup("<h1 class='infoHeader'>WARN Notice</h1><p class ='infoHeader'>Notice Date: " + feature.properties.NoticeDate + "</p><p class='infoHeader'>Reason: " + feature.properties.Reason + "</p><p class ='infoHeader'>Company: " + feature.properties.Company + "</p><p class ='infoHeader'>Address: " + feature.properties.Address + "</p><p class ='infoHeader'>Industry: " + feature.properties.Industry + "</p><p class ='infoHeader'>Total Employees Affected: " + feature.properties.TotalEmployeesAffected + "</p>");
 };
+
 L.geoJSON(warn, {
 	onEachFeature: myEvent
 }).addTo(mymap);
