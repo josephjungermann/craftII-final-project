@@ -10,7 +10,6 @@ You will find this is far easier than the opposite task of using CSS to cram you
  LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
 *********************************************************************/
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
-
 /*********************************************************************
   YOUR MOBILE/BASE STYLES GO HERE
 *********************************************************************/
@@ -71,7 +70,6 @@ h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
 }
-
 /***.container.picture img {
     padding: 0;
     position: relative;
@@ -84,7 +82,6 @@ h1 {
     /* Any adjustments for tablets and larger go here.
     Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
 }
-
 /*********************************************************************
   YOUR DESKTOP-ONLY STYLES GO HERE
 *********************************************************************/
