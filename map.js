@@ -37,7 +37,7 @@ function filter_points(filter) {
 
 
 // Set const to import map template and set lon, lat and zoom point on page load
-const mymap = L.map('covidMap').setView([40.712, -74.006], 7);
+const mymap = L.map('covidMap').setView([40.712, -74.006], 6.5);
 
 // Import map style tile layer from MapBox with api key
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -59,14 +59,14 @@ top_ten.forEach((industry, i) => {
 	//color palette of 10
 	const palette = [
 		"#ff7800",
-		"#796465",
+		"#B2E6D4",
 		"#CB8589",
 		"#6969B3",
 		"#98C1D9",
-		"#4B244A",
-		"#25171A",
-		"#465C69",
-		"#98A886",
+		"#E1BC29",
+		"#F1BF98",
+		"#DF2935",
+		"#606C38",
 		"#8093F1"
 	];
 

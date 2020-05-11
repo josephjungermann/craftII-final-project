@@ -17,12 +17,11 @@ You will find this is far easier than the opposite task of using CSS to cram you
     box-sizing: border-box;
 }
 
-body,
-html {
+html, body {
     /* Sets default font-size to 16px, ensuring 1em = 16px; */
-    font-size  : 16px;
+    font-size: 16px;
     font-family: 'Roboto', sans-serif;
-    margin     : 0;
+    margin: 0;
 }
 
 p {
@@ -31,129 +30,51 @@ p {
 
 h1 {
     max-width: 600px;
-    margin   : auto;
+    margin: auto;
+    text-align: center;
+    line-height: 80px;
 }
 
-.copy {
-    max-width    : 600px;
-    margin-left  : auto;
-    margin-right : auto;
-    margin-bottom: 20px;
+.picture-wrapper {
+    max-width: none;
+    width: 100%;
+    background-color: #000;
 }
 
-.active {
-    opacity   : 1;
-    transition: opacity 1s;
-}
-
-.inactive {
-    opacity   : 0;
-    transition: opacity 1s;
-}
-
-.scroller {
-    width        : 100%;
-    margin-bottom: 20px;
-}
-
-.scroll-graphic {
-    position: sticky;
-    top     : 0;
-    height  : 100vh;
-}
-
-.photo {
-    position: absolute;
-    top     : 0;
-    left    : 0;
-    height  : 100%;
-}
-
-.photo img {
-    object-fit: cover;
-    width     : 100%;
-    height    : 100%;
-}
-
-.scroll-scenes {
-    position   : relative;
-    padding-top: 50vh;
-}
-
-.scene {
-    font-size       : 24px;
-    background-color: rgba(0, 0, 0, 0.75);
-    color           : white;
-    max-width       : 500px;
-    margin          : auto auto 100vh;
-    padding         : 15px;
-}
-
-.scene-last-child {
-    padding-bottom: 50vh;
-}
-
-.after {
-    height: 1px;
+.picture-wrapper img {
+    padding: 0;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
 }
 
 .container {
     max-width: 800px;
-    margin   : 0 auto;
-    padding  : 10px;
+    margin: 0 auto;
+    padding: 10px;
 }
 
-.container.picture {
-    max-width       : none;
-    width           : 100%;
-    background-color: #000;
-}
-
-.container.picture img {
-    padding  : 0;
-    position : relative;
-    width    : 100%;
-    max-width: 1200px;
-    margin   : 0 auto;
-    display  : block;
-}
-
-.counter-value {
-    font-family: 'Roboto', sans-serif;
-    font-size  : 24px;
-}
-
-h3 {
-    max-width: 400px;
-    margin   : auto;
+.byline {
+    margin: auto;
+    text-align: center;
 }
 
 #covidMap {
     height: 500px;
 }
 
-.counter-section {
-    margin: 10%, auto;
-}
-
-.counter-section p {
-    font-size : 25px;
-    text-align: center;
-    color     : rgb(220, 20, 60);
-}
-
-.counter-section .counter {
-    font-size  : 40px;
-    text-align : center;
-    line-height: 5px;
-    color      : rgb(220, 20, 60);
-}
-
 .infoHeader {
-    color      : Black;
+    color: Black;
     font-family: 'Roboto', sans-serif;
-    font-size  : 12px;
+    font-size: 12px;
 }
+/***.container.picture img {
+    padding: 0;
+    position: relative;
+    width: 100%
+}***/
 /*********************************************************************
   YOUR TABLET/DESKTOP STYLES GO HERE
 *********************************************************************/
@@ -168,3 +89,6 @@ h3 {
     /* Any adjustments for desktop and larger go here.
     Note these styles will be applied to anything 729px or larger -- so desktop */
 }
+
+.picture-wrapper img {
+    max-width: 960px;
