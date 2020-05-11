@@ -24,27 +24,13 @@
   </head> ​
 
   <body>
-    <div class="scroller">
-      <div class="scroll-graphic">
-        <div class="photo active"><img src="images/image1.JPG" /></div>
-        <div class="photo inactive"><img src="images/image2.JPG" /></div>
-      </div>
-      <div class="scroll-scenes">
-        <div class="scene">
-          <h1>Header Text</h1>
-        </div>
-        <div class="scene">Caption Text</div>
-      </div>
-      <div class="after">
-      </div>
+    <div class="picture-wrapper">
+      <img src="images/image1.JPG" />
     </div>
     <div class="container">
-      <p><strong>By Joseph Jungermann (<a href="https://twitter.com/j_mann29">@j_mann29</a>)</strong></p>
+      <h1>Example Header</h1>
+      <p class="byline"><i>By Joseph Jungermann</i></p>
       <br>
-      <div class="counter-section">
-        <p class="counter">109,739</p>
-        <p>Total New York State employees laid off due to COVID-19</p>
-      </div>
       <p>Example text</p>
       <br>
       <div id="covidMap">
@@ -88,10 +74,6 @@
       <br>
       <p>Example text</p>
       <br>
-      <div class="container picture">
-        <img src="images/tim-mossholder-C8jNJslQM3A-unsplash.jpg">
-      </div>
-      <br>
       <p>Example text</p>
       <br>
     </div>
@@ -99,31 +81,15 @@
     <!-- the jQuery library. You need this to be able to use jQuery ($) -->
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 
-    <!-- Script library for scroller-->
-    <script src="https://unpkg.com/@newswire/scroller/dist/index.umd.js"> </script>
     <!-- Script library for Leaflet-->
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
-    <!-- Script libraries for counter -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 
     <!-- Your javascript page sources should be called here -->
-    <!-- Script for scroller -->
-    <script src="scroller.js"></script>
     <!-- Script for geoJSON leaflet points and data-->
     <script src="data/WARN.js"></script>
     <!-- Script for Leaflet map build -->
     <script src="map.js"></script>
-    <!-- Counter script below -->
-    <script src="counter.js"></script>
-    <script>
-      jQuery(document).ready(function($) {
-        $('.counter').counterUp({
-          delay: 10,
-          time: 2000
-        });
-      });
-    </script>
+
   </body>
 
 </html>
