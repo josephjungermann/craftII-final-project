@@ -2,7 +2,6 @@
  LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
 *********************************************************************/
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
-
 /*********************************************************************
   YOUR MOBILE/BASE STYLES GO HERE
 *********************************************************************/
@@ -90,7 +89,15 @@ blockquote p {
     font-size: 12px;
     line-height: 1.5em;
 }
+<<<<<<< HEAD
 
+=======
+/***.container.picture img {
+    padding: 0;
+    position: relative;
+    width: 100%
+}***/
+>>>>>>> 1896bc6063f8396729d6f8a2f927e550dfe0fbc3
 /*********************************************************************
   YOUR TABLET/DESKTOP STYLES GO HERE
 *********************************************************************/
@@ -98,7 +105,6 @@ blockquote p {
     /* Any adjustments for tablets and larger go here.
     Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
 }
-
 /*********************************************************************
   YOUR DESKTOP-ONLY STYLES GO HERE
 *********************************************************************/
