@@ -1,11 +1,3 @@
-/*
-This is a good layout for a mobile-first CSS template.
-Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
-Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
-
-Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
-You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
-*/
 /*********************************************************************
  LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
 *********************************************************************/
@@ -19,41 +11,67 @@ You will find this is far easier than the opposite task of using CSS to cram you
 
 html, body {
     /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    background-color: #eee;
     font-size: 16px;
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-}
-
-p {
-    line-height: 1.5em;
+    font-family: 'Trebuchet MS', serif;
+    line-height: 1.6;
 }
 
 h1 {
     max-width: 600px;
     margin: auto;
     text-align: center;
-    line-height: 80px;
+    line-height: 40px;
+    padding-bottom: 10px;
 }
 
-.picture-wrapper {
-    max-width: none;
-    width: 100%;
-    background-color: #000;
-}
-
-.picture-wrapper img {
-    padding: 0;
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+/*
+h2 {
     display: block;
+    padding: 20px 20px 12px;
+    font: 700 36px 'Open Sans', sans-serif;
+    background: #623CEA;
+    color: #FAFAFA;
+    text-transform: uppercase;
+}*/
+blockquote {
+    font-family: "Lucida Console", Monaco, monospace;
+    line-height: 1.5em;
+    background: #f9f9f9;
+    border-left: 10px solid #623CEA;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+}
+
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 2.5em;
+    line-height: 0.3em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+blockquote p {
+    display: inline;
+}
+
+#skyline-image {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#header-image {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 10px;
 }
 
 .container {
-    max-width: 800px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 15px;
+    max-width: 900px;
 }
 
 .byline {
@@ -69,12 +87,17 @@ h1 {
     color: Black;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
+    line-height: 1.5em;
 }
+<<<<<<< HEAD
+
+=======
 /***.container.picture img {
     padding: 0;
     position: relative;
     width: 100%
 }***/
+>>>>>>> 1896bc6063f8396729d6f8a2f927e550dfe0fbc3
 /*********************************************************************
   YOUR TABLET/DESKTOP STYLES GO HERE
 *********************************************************************/
@@ -89,6 +112,3 @@ h1 {
     /* Any adjustments for desktop and larger go here.
     Note these styles will be applied to anything 729px or larger -- so desktop */
 }
-
-.picture-wrapper img {
-    max-width: 960px;
